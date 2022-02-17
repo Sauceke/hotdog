@@ -1,5 +1,4 @@
 # hotdog
-
 A pocket pussy with depth sensing.
 
 This repo contains the schematic, 3D prints and Arduino code required to build a Hotdog.
@@ -7,7 +6,7 @@ This repo contains the schematic, 3D prints and Arduino code required to build a
 Thanks to [ManlyMarco](https://github.com/ManlyMarco) for coming up with the idea.
 
 ## Parts
-
+Here are all the parts you'll need for a Hotdog connected via USB.
 - A transparent sleeve (I used [this one](https://www.thehandy.com/product/open-ended-sleeve-hard/?ref=saucekebenfield&utm_source=saucekebenfield&utm_medium=affiliate&utm_campaign=The%20Handy%20Affiliate%20program))
 - A 3D print of [this](releases/latest/download/hotdog-case-top.stl)
 - A 3D print of [this](releases/latest/download/hotdog-case-bottom.stl)
@@ -23,4 +22,6 @@ Thanks to [ManlyMarco](https://github.com/ManlyMarco) for coming up with the ide
 - Rubber bands
 
 ## Schematic
+Complete assembly guide soon.
+
 ![schematic](https://github.com/Sauceke/hotdog/releases/latest/download/hotdog-circuit.png)

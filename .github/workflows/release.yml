@@ -1,0 +1,69 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version'
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install OpenSCAD
+        run: sudo apt-get install openscad
+      
+      - name: Install Circuit Diagram
+        run: |
+          mkdir circuitdiagram
+          cd circuitdiagram
+          sudo apt-get install libfontconfig1
+          wget https://github.com/circuitdiagram/circuitdiagram/releases/download/v4.0.2-pre.8/circuit-diagram-cli.4.0.2-pre.8.linux-x64.tar.xz -o circuitdiagram.tar.xz
+          tar -xf cd.tar.xz
+          git clone git@github.com:circuitdiagram/components.git components
+          cd ..
+      
+      - name: Make assets directory
+        run: mkdir assets
+      
+      - name: Compile firmware
+        uses: arduino/compile-sketches@v1.0.0
+        with:
+          sketch-paths: ./hotdog-fw
+      
+      - name: Copy firmware into assets
+        run: cp hotdog-fw/hotdog-fw.ino assets
+      
+      - name: Build top casing
+        run: openscad -o assets/hotdog-case-top.stl -D 'hotdog_top();' hotdog-hw/hotdog-case.scad
+      
+      - name: Build bottom casing
+        run: openscad -o assets/hotdog-case-bottom.stl -D 'hotdog_bottom();' hotdog-hw/hotdog-case.scad
+      
+      - name: Render circuit
+        run: circuitdiagram/circuit-diagram-cli circuit --components circuitdiagram/components -o assets/hotdog-circuit.png hotdog-hw/hotdog.cddx
+      
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ github.event.inputs.version }}
+          release_name: Version ${{ github.event.inputs.version }}
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Assets
+        id: upload-release-assets
+        uses: dwenegar/upload-release-assets@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          release_id: ${{ steps.create_release.outputs.id }}
+          assets_path: assets
+          

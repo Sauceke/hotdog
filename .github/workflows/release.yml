@@ -22,6 +22,7 @@ jobs:
           mkdir circuitdiagram
           cd circuitdiagram
           sudo apt-get install libfontconfig1
+          sudo apt install xz-utils
           wget https://github.com/circuitdiagram/circuitdiagram/releases/download/v4.0.2-pre.8/circuit-diagram-cli.4.0.2-pre.8.linux-x64.tar.xz -o circuitdiagram.tar.xz
           tar -xf circuitdiagram.tar.xz
           git clone git@github.com:circuitdiagram/components.git components

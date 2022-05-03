@@ -22,33 +22,33 @@ you around $20, not counting the sleeve itself.
 1. Place the photoresistors on the **back side** of the PCB at equal distances along the middle line. The exact distance between them is
 not that important, but try to place them evenly. Solder them in (this is easier if your PCB is plated on both sides, if it isn't, then
 take extra care not to burn the photocells).
-<img src="doc/photo1.jpg" width="420">
+<img src="photo1.jpg" width="420">
 
 2. Wire up the photocells like this, except the wires should run on the **front side** of the PCB.
-<img src="doc/diagram1.svg" width="420">
+<img src="diagram1.svg" width="420">
 
 The front side should look something like this:
 
-<img src="doc/photo2.jpg" width="420">
+<img src="photo2.jpg" width="420">
 
 3. Put the sockets on the Nano and solder them onto the board in the below orientation. Leave at least one row space at the top (as shown in the next diagram).
-<img src="doc/photo3.jpg" width="420">
+<img src="photo3.jpg" width="420">
 
 At the bare minimum, put solder on both ends of both sockets. Make sure you don't solder any adjacent pins together.
 
 4. Now connect the photocells to the Nano according to the following diagram. Do NOT solder the wires directly onto the Nano, solder them
 to the sockets (I couldn't find a way to illustrate this in Fritzing, sorry).
-<img src="doc/diagram2.svg" width="420">
+<img src="diagram2.svg" width="420">
 
-<img src="doc/photo4.jpg" width="420">
+<img src="photo4.jpg" width="420">
 
-<img src="doc/diagram3.svg" width="420">
+<img src="diagram3.svg" width="420">
 
-<img src="doc/photo5.jpg" width="420">
+<img src="photo5.jpg" width="420">
 
-<img src="doc/photo6.jpg" width="420">
+<img src="photo6.jpg" width="420">
 
-<img src="doc/photo7.jpg" width="420">
+<img src="photo7.jpg" width="420">
 
-<img src="doc/photo8.jpg" width="420">
+<img src="photo8.jpg" width="420">
 

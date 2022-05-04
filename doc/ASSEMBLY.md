@@ -1,4 +1,4 @@
-# (WIP) How to make a Hotdog (cheapest version)
+# How to make a Hotdog (cheapest version)
 
 ## Parts
 Here are all the parts you'll need. If you have access to a 3D printer and use a cheap Nano clone with CH340, the whole thing will run
@@ -18,7 +18,7 @@ you around $20, not counting the sleeve itself.
 - Rubber bands
 - Solder and hook-up wire, duh
 
-## Top circuit
+## Assembly
 1. Place the photoresistors on the **back side** of the PCB at equal distances along the middle line. The exact distance between them is
 not that important, but try to place them evenly. Solder them in (this is easier if your PCB is plated on both sides, if it isn't, then
 take extra care not to burn the photocells).
@@ -34,21 +34,28 @@ The front side should look something like this:
 3. Put the sockets on the Nano and solder them onto the board in the below orientation. Leave at least one row space at the top (as shown in the next diagram).
 <img src="photo3.jpg" width="420">
 
-At the bare minimum, put solder on both ends of both sockets. Make sure you don't solder any adjacent pins together.
+You don't have to solder each and every pin in, but at the bare minimum, do the corners. Make sure you don't solder any adjacent pins together.
 
 4. Now connect the photocells to the Nano according to the following diagram. Do NOT solder the wires directly onto the Nano, solder them
-to the sockets (I couldn't find a way to illustrate this in Fritzing, sorry).
+to the sockets (I couldn't find a way to illustrate this in Fritzing, so also see the photo for reference).
 <img src="diagram2.svg" width="420">
 
 <img src="photo4.jpg" width="420">
 
+After the photocells are connected, you can trim off all the legs.
+
+5. Mount the LEDs on the second PCB and hook them up to the Nano and each other according to this diagram (black wire to cathodes). Don't forget the resistor.
 <img src="diagram3.svg" width="420">
 
 <img src="photo5.jpg" width="420">
 
+6. Tie the casings together at the back with zipties. Leave them loose; don't tighten them until the sleeve is in.
 <img src="photo6.jpg" width="420">
 
+7. Slide the PCBs in and secure each with a ziptie and the clipped off end of another ziptie.
 <img src="photo7.jpg" width="420">
 
+8. Add the sleeve, hold it down with rubber bands at the front, and tighten the zipties at the back. Make sure all sides of the casing press down on the sleeve evenly.
 <img src="photo8.jpg" width="420">
 
+9. Serve hot.

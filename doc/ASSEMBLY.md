@@ -18,6 +18,10 @@ you around $20, not counting the sleeve itself.
 - Rubber bands
 - Solder and hook-up wire, duh
 
+## Programming
+Upload [this sketch](https://github.com/Sauceke/hotdog/releases/latest/download/hotdog-fw.ino) to the Nano. If you've never done this before, [here is how you upload a sketch](https://docs.arduino.cc/software/ide-v1/tutorials/getting-started/cores/arduino-avr) in Arduino IDE 1.
+
+
 ## Assembly
 1. Place the photoresistors on the **back side** of the PCB at equal distances along the middle line. The exact distance between them is
 not that important, but try to place them evenly. Solder them in (this is easier if your PCB is plated on both sides, if it isn't, then

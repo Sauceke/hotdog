@@ -46,6 +46,7 @@ jobs:
         with:
           config: compress.fabrications.kibot.yaml
           board: 'hotdog-hw/hotdog-pcb/hotdog-pcb-front.kicad_pcb'
+          schema: 'hotdog-hw/hotdog-pcb/hotdog-pcb-front.kicad_sch'
           dir: assets
 
       - name: Render back PCBs
@@ -53,6 +54,7 @@ jobs:
         with:
           config: compress.fabrications.kibot.yaml
           board: 'hotdog-hw/hotdog-pcb/hotdog-pcb-back.kicad_pcb'
+          schema: 'hotdog-hw/hotdog-pcb/hotdog-pcb-back.kicad_sch'
           dir: assets
 
       - name: Create Release

@@ -24,6 +24,13 @@ jobs:
         uses: arduino/compile-sketches@v1.0.0
         with:
           sketch-paths: ./hotdog-fw
+          libraries: |
+            - name: AVR-context
+              version: 0.9.1
+            - name: RF24
+              version: 1.4.2
+            - name: BTLE
+              version: 1.0
       
       - name: Copy firmware into assets
         run: cp hotdog-fw/hotdog-fw.ino assets

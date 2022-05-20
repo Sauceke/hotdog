@@ -17,16 +17,6 @@ jobs:
       - name: Install OpenSCAD
         run: sudo apt-get install openscad
       
-      - name: Install Circuit Diagram
-        run: |
-          mkdir circuitdiagram
-          cd circuitdiagram
-          sudo apt-get install libfontconfig1
-          curl -L https://github.com/circuitdiagram/circuitdiagram/releases/download/v4.0.2-pre.8/circuit-diagram-cli.4.0.2-pre.8.linux-x64.tar.xz --output circuitdiagram.tar.xz
-          tar -xf circuitdiagram.tar.xz
-          git clone https://github.com/circuitdiagram/components.git components
-          cd ..
-      
       - name: Make assets directory
         run: mkdir assets
       
@@ -44,9 +34,20 @@ jobs:
       - name: Build bottom casing
         run: openscad -o assets/hotdog-case-bottom.stl -D 'hotdog_bottom();' hotdog-hw/hotdog-case.scad
       
-      - name: Render circuit
-        run: circuitdiagram/circuit-diagram-cli circuit --components circuitdiagram/components -o assets/hotdog-circuit.png hotdog-hw/hotdog.cddx
-      
+      - name: Render front PCBs
+        uses: nerdyscout/kicad-exports@v2.3.1
+        with:
+          config: compress.fabrications.kibot.yaml
+          board: 'hotdog-hw/hotdog-pcb/hotdog-pcb-front.kicad_pcb'
+          dir: assets
+
+      - name: Render back PCBs
+        uses: nerdyscout/kicad-exports@v2.3.1
+        with:
+          config: compress.fabrications.kibot.yaml
+          board: 'hotdog-hw/hotdog-pcb/hotdog-pcb-back.kicad_pcb'
+          dir: assets
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1

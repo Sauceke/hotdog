@@ -4,7 +4,15 @@ outputs:
   - name: gerbers
     type: gerber
     dir: pcbout
-    layers: selected
+    layers:
+      - copper
+      - F.SilkS
+      - B.SilkS
+      - F.Mask
+      - B.Mask
+      - F.Paste
+      - B.Paste
+      - Edge.Cuts
   - name: drill
     type: excellon
     dir: pcbout

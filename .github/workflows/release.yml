@@ -41,18 +41,18 @@ jobs:
       - name: Build bottom casing
         run: openscad -o assets/hotdog-case-bottom.stl -D 'hotdog_bottom();' hotdog-hw/hotdog-case.scad
       
-      - name: Render front PCBs
-        uses: nerdyscout/kicad-exports@v2.3.1
+      - name: Render front PCB
+        uses: INTI-CMNB/KiBot@v2_k6
         with:
-          config: compress.fabrications.kibot.yaml
+          config: 'hotdog-hw/hotdog-pcb/kibot.yaml'
           board: 'hotdog-hw/hotdog-pcb/hotdog-pcb-front.kicad_pcb'
           schema: 'hotdog-hw/hotdog-pcb/hotdog-pcb-front.kicad_sch'
           dir: assets
 
-      - name: Render back PCBs
-        uses: nerdyscout/kicad-exports@v2.3.1
+      - name: Render back PCB
+        uses: INTI-CMNB/KiBot@v2_k6
         with:
-          config: compress.fabrications.kibot.yaml
+          config: 'hotdog-hw/hotdog-pcb/kibot.yaml'
           board: 'hotdog-hw/hotdog-pcb/hotdog-pcb-back.kicad_pcb'
           schema: 'hotdog-hw/hotdog-pcb/hotdog-pcb-back.kicad_sch'
           dir: assets

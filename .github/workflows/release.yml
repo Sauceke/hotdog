@@ -27,7 +27,7 @@ jobs:
           fqbn: arduino:megaavr:nona4809
           cli-compile-flags: |
             - --export-binaries
-            - --output-dir=assets
+            - --output-dir=hotdog-fw-nanoevery-bin
           libraries: |
             - name: AVR-context
               version: '0.9.1'
@@ -36,7 +36,10 @@ jobs:
             - name: BTLE
               version: '1.0.0'
 
-      - name: Copy firmware into assets
+      - name: Zip firmware binaries (Nano Every)
+        run: zip -r assets/hotdog-fw-nanoevery-bin.zip hotdog-fw-nanoevery-bin
+
+      - name: Copy firmware sketch into assets
         run: cp hotdog-fw/hotdog-fw.ino assets
       
       - name: Build top casing

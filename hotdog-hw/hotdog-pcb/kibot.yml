@@ -4,7 +4,7 @@ outputs:
   - name: gerbers
     type: gerber
     dir: pcbout
-    layers: technical
+    layers: selected
   - name: drill
     type: excellon
     dir: pcbout
@@ -27,4 +27,4 @@ outputs:
         - source: 'pcbout/*'
           dest: '.'
       format: 'ZIP'
-      output: '%p-fab-%r.%x'
+      output: '%p-fab.%x'

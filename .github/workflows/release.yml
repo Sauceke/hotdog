@@ -44,7 +44,7 @@ jobs:
       - name: Render front PCB
         uses: INTI-CMNB/KiBot@v2_k6
         with:
-          config: 'hotdog-hw/hotdog-pcb/kibot.yaml'
+          config: 'hotdog-hw/hotdog-pcb/kibot.yml'
           board: 'hotdog-hw/hotdog-pcb/hotdog-pcb-front.kicad_pcb'
           schema: 'hotdog-hw/hotdog-pcb/hotdog-pcb-front.kicad_sch'
           dir: assets
@@ -52,7 +52,7 @@ jobs:
       - name: Render back PCB
         uses: INTI-CMNB/KiBot@v2_k6
         with:
-          config: 'hotdog-hw/hotdog-pcb/kibot.yaml'
+          config: 'hotdog-hw/hotdog-pcb/kibot.yml'
           board: 'hotdog-hw/hotdog-pcb/hotdog-pcb-back.kicad_pcb'
           schema: 'hotdog-hw/hotdog-pcb/hotdog-pcb-back.kicad_sch'
           dir: assets

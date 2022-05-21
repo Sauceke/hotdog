@@ -50,7 +50,7 @@ jobs:
           dir: assets
 
       - name: im not your maid kibot
-        run: rm -rf assets/pcbout
+        run: sudo rm -rf assets/pcbout
 
       - name: Render back PCB
         uses: INTI-CMNB/KiBot@v2_k6
@@ -61,7 +61,7 @@ jobs:
           dir: assets
 
       - name: clean up your own shit
-        run: rm -rf assets/pcbout
+        run: sudo rm -rf assets/pcbout
 
       - name: Create Release
         id: create_release

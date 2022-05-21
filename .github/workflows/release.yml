@@ -20,11 +20,11 @@ jobs:
       - name: Make assets directory
         run: mkdir assets
       
-      - name: Compile firmware (Nano)
+      - name: Compile firmware (Nano Every)
         uses: arduino/compile-sketches@v1.0.0
         with:
           sketch-paths: ./hotdog-fw
-          fqbn: arduino:avr:nano
+          fqbn: arduino:megaavr:nona4809
           cli-compile-flags: |
             - --export-binaries
             - --output-dir=assets
@@ -35,7 +35,7 @@ jobs:
               version: '1.4.2'
             - name: BTLE
               version: '1.0.0'
-      
+
       - name: Copy firmware into assets
         run: cp hotdog-fw/hotdog-fw.ino assets
       

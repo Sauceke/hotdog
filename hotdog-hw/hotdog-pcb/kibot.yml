@@ -4,7 +4,7 @@ outputs:
   - name: gerbers
     type: gerber
     dir: pcbout
-    layers: all
+    layers: technical
   - name: drill
     type: excellon
     dir: pcbout

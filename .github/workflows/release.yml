@@ -49,6 +49,9 @@ jobs:
           schema: 'hotdog-hw/hotdog-pcb/hotdog-pcb-front.kicad_sch'
           dir: assets
 
+      - name: im not your maid kibot
+        run: rm -rf assets/pcbout
+
       - name: Render back PCB
         uses: INTI-CMNB/KiBot@v2_k6
         with:
@@ -56,6 +59,9 @@ jobs:
           board: 'hotdog-hw/hotdog-pcb/hotdog-pcb-back.kicad_pcb'
           schema: 'hotdog-hw/hotdog-pcb/hotdog-pcb-back.kicad_sch'
           dir: assets
+
+      - name: clean up your own shit
+        run: rm -rf assets/pcbout
 
       - name: Create Release
         id: create_release

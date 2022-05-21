@@ -20,24 +20,24 @@ jobs:
       - name: Make assets directory
         run: mkdir assets
       
-      - name: Compile firmware (Nano Every)
+      - name: Compile firmware (Nano)
         uses: arduino/compile-sketches@v1.0.0
         with:
           sketch-paths: ./hotdog-fw
-          fqbn: arduino:megaavr:nona4809
+          fqbn: arduino:avr:nano
           cli-compile-flags: |
             - --export-binaries
-            - --output-dir=hotdog-fw-nanoevery-bin
+            - --output-dir=hotdog-fw-nano-bin
           libraries: |
-            - name: AVR-context
-              version: '0.9.1'
+            - name: Protothreads
+              version: '1.4.0-arduino.beta.1'
             - name: RF24
               version: '1.4.2'
             - name: BTLE
               version: '1.0.0'
 
-      - name: Zip firmware binaries (Nano Every)
-        run: zip -r assets/hotdog-fw-nanoevery-bin.zip hotdog-fw-nanoevery-bin
+      - name: Zip firmware binaries (Nano)
+        run: zip -r assets/hotdog-fw-nano-bin.zip hotdog-fw-nano-bin
 
       - name: Copy firmware sketch into assets
         run: cp hotdog-fw/hotdog-fw.ino assets

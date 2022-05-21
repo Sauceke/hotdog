@@ -1,12 +1,7 @@
 #include <SPI.h>
 #include <RF24.h>
 #include <BTLE.h>
-#include <avrcontext_arduino.h>
-
-#define STACK_SIZE 256
-
-static uint8_t sensorStack[STACK_SIZE], broadcastStack[STACK_SIZE];
-static avr_coro_t sensorState, broadcastState;
+#include <pt.h>
 
 // sensors: A0 to A4
 // A0 is the topmost sensor
@@ -18,8 +13,7 @@ const float threshold = 1.2;
 // the sensor readings at calibration
 int baseValues[sensors];
 
-// the current depth level (100: fully inserted)
-int level = 0;
+struct pt sensorThread, broadcastThread;
 
 RF24 radio(9, 10, 1000000);
 BTLE btle(&radio);
@@ -50,22 +44,28 @@ void setup() {
   btle.begin("hotdog");
   radio.setPALevel(RF24_PA_LOW);
   calibrate();
-  avr_coro_init(&sensorState, (void*)sensorStack, STACK_SIZE,
-      (avr_coro_func_t)sensorLoop);
-  avr_coro_init(&broadcastState, (void*)broadcastStack, STACK_SIZE,
-      (avr_coro_func_t)broadcastLoop);
+  PT_INIT(&sensorThread);
+  PT_INIT(&broadcastThread);
 }
 
 void loop() {
-  avr_coro_resume(&sensorState, (void *)&level);
-  avr_coro_resume(&broadcastState, (void *)&level);
+  static int level = 0;
+  sensorLoop(&sensorThread, &level);
+  broadcastLoop(&broadcastThread, &level);
 }
 
-static void* sensorLoop(avr_coro_t *self, size_t *data) {
+void toTcode(char* out, int level) {
+  sprintf(out, "L0%d", 100 - level);
+}
+
+PT_THREAD(sensorLoop(struct pt* pt, int* level)) {
+  PT_BEGIN(pt);
+  static float lvl;
+  static int i;
   while (true) {
-    float lvl = 0;
-    for (int i = 0; i < sensors; i++) {
-      avr_coro_yield(self, (void*)data);
+    lvl = 0;
+    for (i = 0; i < sensors; i++) {
+      PT_YIELD(pt);
       int value = readSensor(A0 + i);
       // stop at the first sensor, from top, that detects a shadow
       if (value > baseValues[i] * threshold) {
@@ -76,19 +76,21 @@ static void* sensorLoop(avr_coro_t *self, size_t *data) {
     }
     lvl /= sensors;
     lvl = max(min(lvl, 1), 0);
-    *data = int(lvl * 100);
+    *level = int(lvl * 100);
   }
+  PT_END(pt);
 }
 
-static void* broadcastLoop(avr_coro_t *self, size_t *data) {
+PT_THREAD(broadcastLoop(struct pt* pt, int* level)) {
+  PT_BEGIN(pt);
   while (true) {
-    size_t lvl = *data;
     char message[10];
-    sprintf(message, "L0%d", 100 - lvl);
+    toTcode(message, *level);
     btle.advertise(0x16, &message, strlen(message));
     btle.hopChannel();
-    Serial.println(message);
     delay(1);
-    avr_coro_yield(self, (void*)data);
+    Serial.println(message);
+    PT_YIELD(pt);
   }
+  PT_END(pt);
 }

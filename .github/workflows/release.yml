@@ -27,7 +27,7 @@ jobs:
           fqbn: arduino:avr:nano
           cli-compile-flags: |
             - --export-binaries
-            - --output-dir assets
+            - --output-dir=assets
           libraries: |
             - name: AVR-context
               version: '0.9.1'
@@ -43,7 +43,7 @@ jobs:
           fqbn: arduino:megaavr:nona4809
           cli-compile-flags: |
             - --export-binaries
-            - --output-dir assets
+            - --output-dir=assets
           libraries: |
             - name: AVR-context
               version: '0.9.1'

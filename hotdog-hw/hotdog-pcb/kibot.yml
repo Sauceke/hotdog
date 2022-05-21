@@ -5,27 +5,26 @@ outputs:
     type: gerber
     dir: pcbout
     layers: all
-- name: drill
-    type: excellon
-    dir: pcbout
+  - name: drill
+      type: excellon
+      dir: pcbout
+      options:
+        metric_units: false
+        minimal_header: true
+        zeros_format: SUPPRESS_LEADING
+        left_digits: 2
+        right_digits: 4
+        pth_and_npth_single_file: false
+        pth_id: '-PTH'
+        npth_id: '-NPTH'
+        output: "%f%i.drl"
+  - name: compress
+    type: compress
+    dir: '.'
     options:
-      metric_units: false
-      minimal_header: true
-      zeros_format: SUPPRESS_LEADING
-      left_digits: 2
-      right_digits: 4
-      pth_and_npth_single_file: false
-      pth_id: '-PTH'
-      npth_id: '-NPTH'
-      output: "%f%i.drl"
-- name: compress
-  type: compress
-  dir: '.'
-  options:
-    compression: auto
-    files:
-      - source: 'pcbout/*'
-        dest: '.'
-    format: 'ZIP'
-    output: '%p-fab-%r.%x'
-  
+      compression: auto
+      files:
+        - source: 'pcbout/*'
+          dest: '.'
+      format: 'ZIP'
+      output: '%p-fab-%r.%x'

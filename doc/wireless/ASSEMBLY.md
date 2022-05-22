@@ -42,6 +42,10 @@ Arduino Nano:
 
 Extract [this zip](https://github.com/Sauceke/hotdog/releases/latest/download/hotdog-fw-nano-bin.zip) and upload the file `hotdog-fw.ino.hex` to the Nano using [XLoader](https://www.hobbytronics.co.uk/arduino-xloader).
 
+> <img src="xloader.png">
+
+If you don't know which COM port the Nano is on, just try all of them.
+
 Other Nano-compatible microcontrollers (Nano Every etc.):
 
 Compile and upload [this sketch](https://github.com/Sauceke/hotdog/releases/latest/download/hotdog-fw.ino) using the [Arduino IDE](https://www.arduino.cc/en/software). The firmware depends on the following libraries:

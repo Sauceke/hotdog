@@ -7,4 +7,6 @@ Thanks to [ManlyMarco](https://github.com/ManlyMarco) for coming up with the ide
 
 ## [Demo (NSFW)](https://www.erome.com/a/rvRyi8gS)
 
-## [How to make one](doc/ASSEMBLY.md)
+## [How to make one (wireless)](doc/wireless/ASSEMBLY.md)
+
+## [How to make one (eco)](doc/eco/ASSEMBLY.md)

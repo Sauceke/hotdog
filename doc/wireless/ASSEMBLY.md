@@ -2,7 +2,7 @@
 
 ## Parts list
 
-<img src="parts.jpeg" width="420">
+> <img src="parts.jpeg" width="420">
 
 ### Custom parts
 3D print the following modules:
@@ -52,94 +52,67 @@ Compile and upload [this sketch](https://github.com/Sauceke/hotdog/releases/late
 
 ### Soldering (front motherboard)
 1. Put the 1x15 headers on the Nano. (I didn't have 1x15, so I cheated and yanked out one of the terminals from an 1x16. Don't be like me.)
-<img src="A1_prep.jpeg" height="210">
+> <img src="A1_prep.jpeg" height="210">
 
 2. Solder the Nano to `A1` with its (mini/micro) USB connector facing towards the edge.
-<p float="left">
-  <img src="A1_mount.jpeg" height="210">
-  <img src="A1_solder.jpeg" height="210">
-</p>
+> <img src="A1_mount.jpeg" height="210"> <img src="A1_solder.jpeg" height="210">
 
 3. Solder the photoresistors to `R1-R5` (opposite side of the motherboard).
-<img src="R1-R5_mount.jpeg" height="210">
+> <img src="R1-R5_mount.jpeg" height="210">
 
 It is recommended to clip the wires before soldering to minimize heat loss. I prefer to also bend the wires before clipping them, so they won't fall out.
-<p float="left">
-  <img src="R1-R5_mount2.jpeg" height="210">
-  <img src="R1-R5_solder.jpeg" height="210">
-</p>
+> <img src="R1-R5_mount2.jpeg" height="210"> <img src="R1-R5_solder.jpeg" height="210">
 
 **If you're making the USB connected version, you're done here. Skip ahead to [the next section](#soldering-back-motherboard).**
 
 4. Solder the 2x4 header to `U1`.
-<p float="left">
-  <img src="U1_mount.jpeg" height="210">
-  <img src="U1_solder.jpeg" height="210">
-</p>
+> <img src="U1_mount.jpeg" height="210"> <img src="U1_solder.jpeg" height="210">
 
 5. Put the 1x3 female header on the boost converter and solder it to `U2`. Make sure V1 and V0 are aligned with the markings on the motherboard.
-<p float="left">
-  <img src="U2_prep.jpeg" height="210">
-  <img src="U2_mount.jpeg" height="210">
-</p>
-
+> <img src="U2_prep.jpeg" height="210"> <img src="U2_mount.jpeg" height="210">
 
 6. Solder a capacitor of about 1000uF to `C2`. Mind the polarity.
-<p float="left">
-  <img src="C2_mount.jpeg" height="210">
-  <img src="C2_solder.jpeg" height="210">
-</p>
+> <img src="C2_mount.jpeg" height="210"> <img src="C2_solder.jpeg" height="210">
 
 7. Solder the SPDT switch to `SW1`. The terminals should go into the three holes in the middle. Mine was a bit oversized, but as they say, if there's a hole, there's a way.
-<p float="left">
-  <img src="SW1_mount.jpeg" height="210">
-  <img src="SW1_solder.jpeg" height="210">
-</p>
+> <img src="SW1_mount.jpeg" height="210"> <img src="SW1_solder.jpeg" height="210">
+
 Words to live by indeed.
 
 8. If you have a thru-hole mount 1xAAA battery holder, you can go ahead and solder it to `BT1` (mind the polarity) and skip to Step 13. If you're using a cheaper battery holder like I did, we need to take a few extra steps. This can get quite messy though, so in retrospect I absolutely recommend getting a proper thru-hole mount.
 
 9. First, trim both wires to about 2cm, and put some deep scratches into the bottom with a sharp object. This is crucial to ensure proper bonding, so carve it up like a psycho.
-<img src="BT1_prep.jpeg" height="210">
+> <img src="BT1_prep.jpeg" height="210">
 
 10. Then solder it to `BT1` in the correct polarity.
-<img src="BT1_solder.jpeg" height="210">
+> <img src="BT1_solder.jpeg" height="210">
 
 11. Clean both the `BT1` footprint and the battery holder with isopropyl alcohol.
 
 12. Glue the battery holder to `BT1` with epoxy. Make sure there is at least 5mm clearance between the battery holder and the edge of the motherboard.
-<p float="left">
-  <img src="BT1_mount.jpeg" height="210">
-  <img src="BT1_mount2.jpeg" height="210">
-</p>
+> <img src="BT1_mount.jpeg" height="210"> <img src="BT1_mount2.jpeg" height="210">
 
 Clamp it down and wait for the glue to dry. Meanwhile, you can start assembling the [back motherboard](#soldering-back-motherboard).
 
 13. Solder a 100uF capacitor to `C1`.
-<img src="C1_mount.jpeg" height="210">
+> <img src="C1_mount.jpeg" height="210">
 
 14. Insert the nRF24 into the `U1` socket, and that's the front motherboard done.
-<p float="left">
-  <img src="FRONT_done.jpeg" height="210">
-  <img src="FRONT_done2.jpeg" height="210">
-</p>
+> <img src="FRONT_done.jpeg" height="210"> <img src="FRONT_done2.jpeg" height="210">
 
 ### Soldering (back motherboard)
 1. Solder the LEDs to `D1-D3`. Pay attention to polarity; one of the sides on each LED is flattened, line that up with the drawing on the PCB.
-<p float="left">
-  <img src="D1-D3_mount.jpeg" height="210">
-  <img src="D1-D3_solder.jpeg" height="210">
-</p>
+> <img src="D1-D3_mount.jpeg" height="210"> <img src="D1-D3_solder.jpeg" height="210">
   
 2. Solder a 1K resistor to `R6`.
-<img src="R6_mount.jpeg" height="210">
+> <img src="R6_mount.jpeg" height="210">
 
 3. Connect `J1` to `J4` and `J2` to `J3` with 12cm long hook-up wires. Solder those in as well.
-<img src="J1-J4_mount.jpeg" height="210">
+> <img src="J1-J4_mount.jpeg" height="210">
 
 The motherboards are now complete.
 
-<img src="BACK_done.jpeg" height="210">
+> <img src="BACK_done.jpeg" height="210">
 
 ### Final assembly
 1. Slide **hotdog-pcb-front** into **hotdog-case-top** and **hotdog-pcb-back** into **hotdog-case-bottom**. Make sure the LEDs and the photoresistors all face inwards (where the sleeve will be).

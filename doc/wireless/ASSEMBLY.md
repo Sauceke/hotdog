@@ -20,7 +20,7 @@ size: 100x50mm, layers: 2, thickness: 1.6mm, solder mask: yes, HASL: yes
 ⚠ For the USB connected version, only parts `A1`, `D1-D3`, `R1-R6` and `J1-J4` are required (highlighted below).
 
 - **`A1`: Arduino Nano (a Nano Every also works) + two 1x15 pin female headers**
-- `BT1`: an 1xAAA battery holder (thru-hole mount recommended)
+- `BT1`: a 1xAAA battery holder (thru-hole mount recommended)
 - `C1`: a 10-100uF capacitor (optional)
 - `C2`: a ~1000uF capacitor (optional)
 - **`D1-D3`: three white LEDs (I used 334-15/T1C1-4WYA)**

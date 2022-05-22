@@ -23,7 +23,7 @@ size: 100x50mm, layers: 2, thickness: 1.6mm, solder mask: yes, HASL: yes
 - `BT1`: an 1xAAA battery holder (thru-hole mount recommended)
 - `C1`: a 10-100uF capacitor (optional)
 - `C2`: a ~1000uF capacitor (optional)
-- `D1-D3`: three white LEDs (I used 334-15/T1C1-4WYA)
+- **`D1-D3`: three white LEDs (I used 334-15/T1C1-4WYA)**
 - **a 12cm long hook-up wire connecting `J1` to `J4`**
 - **a 12cm long hook-up wire connecting `J2` to `J3`**
 - **`R1-R5`: five GL5528 photoresistors**

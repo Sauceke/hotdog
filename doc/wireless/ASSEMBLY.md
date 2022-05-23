@@ -122,8 +122,8 @@ The motherboards are now complete.
 1. Slide **hotdog-pcb-front** into **hotdog-case-top** and **hotdog-pcb-back** into **hotdog-case-bottom**. Make sure the LEDs and the photoresistors all face inwards (where the sleeve will be).
 2. Secure each motherboard with a zip tie and the cut-off end of another zip tie.
 3. Add the sleeve.
-4. Bind the two parts of the chassis together at their open ends with zip ties. Fasten the zip ties just tight enough that the chassis won't separate from the sleeve.
-5. Secure the other end of the chassis to the sleeve with rubber bands.
+4. Bind the two parts of the casing together at their open ends with zip ties. Fasten the zip ties just tight enough that the casing won't separate from the sleeve.
+5. Secure the other end of the casing to the sleeve with rubber bands.
 6. Insert battery, power on and serve.
 
 

@@ -55,7 +55,7 @@ Compile and upload [this sketch](https://github.com/Sauceke/hotdog/releases/late
 
 
 ### Soldering (front motherboard)
-1. Put the 1x15 headers on the Nano. (I didn't have 1x15, so I cheated and yanked out one of the terminals from an 1x16. Don't be like me.)
+1. Put the 1x15 headers on the Nano. (I didn't have 1x15, so I cheated and yanked out one of the terminals from a 1x16. Don't be like me.)
 > <img src="A1_prep.jpeg" height="210">
 
 2. Solder the Nano to `A1` with its (mini/micro) USB connector facing towards the edge.

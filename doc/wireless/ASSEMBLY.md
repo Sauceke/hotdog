@@ -85,7 +85,7 @@ Words to live by indeed.
 
 8. If you have a thru-hole mount 1xAAA battery holder, you can go ahead and solder it to `BT1` (mind the polarity) and skip to Step 13. If you're using a cheaper battery holder like I did, we need to take a few extra steps. This can get quite messy though, so in retrospect I absolutely recommend getting a proper thru-hole mount.
 
-9. First, trim both wires to about 2cm, and put some deep scratches into the bottom with a sharp object. This is crucial to ensure proper bonding, so carve it up like a psycho.
+9. First, trim both wires to about 2cm, and put some deep scratches into the bottom with a sharp object. This is crucial to ensure proper adhesion, so carve it up like a psycho.
 > <img src="BT1_prep.jpeg" height="210">
 
 10. Then solder it to `BT1` in the correct polarity.

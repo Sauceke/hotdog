@@ -93,12 +93,15 @@ Words to live by indeed.
 
 11. Clean both the `BT1` footprint and the battery holder with isopropyl alcohol.
 
-12. Glue the battery holder to `BT1` with epoxy. Make sure there is at least 5mm clearance between the battery holder and the edge of the motherboard.
+12. Glue the battery holder to `BT1` with epoxy.
+
+⚠ Make sure there is at least 5mm clearance between the battery holder and the edge of the motherboard.
+
 > <img src="BT1_mount.jpeg" height="210"> <img src="BT1_mount2.jpeg" height="210">
 
 Clamp it down and wait for the glue to dry. Meanwhile, you can start assembling the [back motherboard](#soldering-back-motherboard).
 
-13. Solder a 100uF capacitor to `C1`.
+13. Solder a 100uF capacitor to `C1`. Again, mind the polarity.
 > <img src="C1_mount.jpeg" height="210">
 
 14. Insert the nRF24 into the `U1` socket, and that's the front motherboard done.

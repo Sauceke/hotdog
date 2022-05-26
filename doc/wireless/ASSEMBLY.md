@@ -95,7 +95,7 @@ Words to live by indeed.
 
 12. Glue the battery holder to `BT1` with epoxy.
 
-⚠ Make sure there is at least 5mm clearance between the battery holder and the edge of the motherboard.
+⚠ Make sure there is at least 5mm clearance between the battery holder and the edge of the motherboard. It doesn't have to be precisely on the footprint, but do not place it any further below that.
 
 > <img src="BT1_mount.jpeg" height="210"> <img src="BT1_mount2.jpeg" height="210">
 

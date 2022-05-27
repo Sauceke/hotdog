@@ -1,7 +1,5 @@
 # How to make a Hotdog (wireless version)
-
 ## Parts list
-
 > <img src="parts.jpeg" width="420">
 
 ### Custom parts
@@ -15,10 +13,8 @@ size: 100x50mm, layers: 2, thickness: 1.6mm, solder mask: yes, HASL: yes
 - 1x [`hotdog-pcb-back`](https://github.com/Sauceke/hotdog/releases/latest/download/hotdog-pcb-back-fab.zip),
 size: 100x50mm, layers: 2, thickness: 1.6mm, solder mask: yes, HASL: yes
 
-
 ### Stock parts
 ⚠ For the USB connected version, only parts `A1`, `D1-D3`, `R1-R6` and `J1-J4` are required (highlighted below).
-
 - **`A1`: Arduino Nano (a Nano Every also works) + two 1x15 pin female headers**
 - `BT1`: a 1xAAA battery holder (thru-hole mount recommended)
 - `C1`: a 10-100uF capacitor (optional)
@@ -34,25 +30,18 @@ size: 100x50mm, layers: 2, thickness: 1.6mm, solder mask: yes, HASL: yes
 - Mini zip ties
 - Rubber bands
 
-
 ## Assembly
-
 ### Programming
 #### Arduino Nano:
-
 Extract [this zip](https://github.com/Sauceke/hotdog/releases/latest/download/hotdog-fw-nano-bin.zip) and upload the file `hotdog-fw.ino.hex` to the Nano using [XLoader](https://www.hobbytronics.co.uk/arduino-xloader).
-
 > <img src="xloader.png">
-
 If you don't know which COM port the Nano is on, just try all of them.
 
 #### Other Nano-compatible microcontrollers (Nano Every etc.):
-
 Compile and upload [this sketch](https://github.com/Sauceke/hotdog/releases/latest/download/hotdog-fw.ino) using the [Arduino IDE](https://www.arduino.cc/en/software). The firmware depends on the following libraries:
 - BTLE
 - Protothreads
 - RF24
-
 
 ### Soldering (front motherboard)
 1. Put the 1x15 headers on the Nano. (I didn't have 1x15, so I cheated and yanked out one of the terminals from a 1x16. Don't be like me.)
@@ -96,7 +85,6 @@ Words to live by indeed.
 12. Glue the battery holder to `BT1` with epoxy.
 
 ⚠ Make sure there is at least 5mm clearance between the battery holder and the edge of the motherboard. It doesn't have to be precisely on the footprint, but do not place it any further below that.
-
 > <img src="BT1_mount.jpeg" height="210"> <img src="BT1_mount2.jpeg" height="210">
 
 Clamp it down and wait for the glue to dry. Meanwhile, you can start assembling the [back motherboard](#soldering-back-motherboard).
@@ -118,7 +106,6 @@ Clamp it down and wait for the glue to dry. Meanwhile, you can start assembling 
 > <img src="J1-J4_mount.jpeg" height="210">
 
 The motherboards are now complete.
-
 > <img src="BACK_done.jpeg" height="210">
 
 ### Final assembly
@@ -128,7 +115,6 @@ The motherboards are now complete.
 4. Bind the two parts of the casing together at their open ends with zip ties. Fasten the zip ties just tight enough that the casing won't separate from the sleeve.
 5. Secure the other end of the casing to the sleeve with rubber bands.
 6. Insert battery, power on and serve.
-
 
 ## Operation
 In wireless mode, the Hotdog is powered by a single AAA battery. I recommend using a rechargeable one. It should last you about 2-3 hours on a single charge. There's no battery level indicator, so recharge frequently.

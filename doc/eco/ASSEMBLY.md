@@ -3,7 +3,7 @@
 ## Parts
 Here are all the parts you'll need. If you have access to a 3D printer and use a cheap Nano clone with CH340, the whole thing will run
 you around $20, not counting the sleeve itself.
-- A transparent sleeve (I used [this one](https://www.thehandy.com/product/open-ended-sleeve-hard/?ref=saucekebenfield&utm_source=saucekebenfield&utm_medium=affiliate&utm_campaign=The%20Handy%20Affiliate%20program))
+- A transparent sleeve (I used [this one](https://www.thehandy.com/product/the-handy-open-ended-sleeve-collection-hard-eu-uk-2/?ref=saucekebenfield&utm_source=saucekebenfield&utm_medium=affiliate&utm_campaign=The%20Handy%20Affiliate%20program))
 - A 3D print of [this](https://github.com/Sauceke/hotdog/releases/latest/download/hotdog-case-top.stl)
 - A 3D print of [this](https://github.com/Sauceke/hotdog/releases/latest/download/hotdog-case-bottom.stl)
 - 1x Arduino Nano

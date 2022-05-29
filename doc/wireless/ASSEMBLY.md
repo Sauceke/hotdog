@@ -27,6 +27,7 @@ size: 100x50mm, layers: 2, thickness: 1.6mm, solder mask: yes, HASL: yes
 - `SW1`: SPDT switch
 - `U1`: nRF24L01 + a 2x4 pin female header
 - `U2`: 0.8-5V to 5V boost converter + a 1x3 pin female header
+- A transparent sleeve (I used [this one](https://www.thehandy.com/product/the-handy-open-ended-sleeve-collection-hard-eu-uk-2/?ref=saucekebenfield&utm_source=saucekebenfield&utm_medium=affiliate&utm_campaign=The%20Handy%20Affiliate%20program))
 - Mini zip ties
 - Rubber bands
 

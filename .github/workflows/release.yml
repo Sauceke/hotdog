@@ -106,9 +106,10 @@ jobs:
         uses: NuGet/setup-nuget@v1.0.2
       - name: Build Hotdog Server
         run: |
+          cd HotdogServer
           nuget restore
-          msbuild HotdogServer/HotdogServer.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=x86Profile
-          cp HotdogServer/HotdogServer/bin/Release/HotdogServer.exe assets
+          msbuild HotdogServer.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=x86Profile
+          cp HotdogServer/bin/Release/HotdogServer.exe assets
       - name: Upload assets
         uses: actions/upload-artifact@v3
         with:

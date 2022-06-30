@@ -108,7 +108,7 @@ jobs:
         run: |
           cd HotdogServer
           nuget restore
-          msbuild HotdogServer.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=x86Profile
+          msbuild HotdogServer.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=x86Profile /p:Version=${{ github.event.inputs.version }}
           cp HotdogServer/bin/Release/HotdogServer.exe ../assets
       - name: Upload assets
         uses: actions/upload-artifact@v3

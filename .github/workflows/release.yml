@@ -8,18 +8,14 @@ on:
         required: true
 
 jobs:
-  build:
+
+  build-arduino:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Install OpenSCAD
-        run: sudo apt-get install openscad
-      
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Make assets directory
         run: mkdir assets
-      
       - name: Compile firmware (Nano)
         uses: arduino/compile-sketches@v1.0.0
         with:
@@ -35,19 +31,23 @@ jobs:
               version: '1.4.2'
             - name: BTLE
               version: '1.0.0'
-
       - name: Zip firmware binaries (Nano)
         run: zip -r assets/hotdog-fw-nano-bin.zip hotdog-fw-nano-bin
-
       - name: Copy firmware sketch into assets
         run: cp hotdog-fw/hotdog-fw.ino assets
-      
-      - name: Build top casing
-        run: openscad -o assets/hotdog-case-top.stl -D 'hotdog_top();' hotdog-hw/hotdog-case.scad
-      
-      - name: Build bottom casing
-        run: openscad -o assets/hotdog-case-bottom.stl -D 'hotdog_bottom();' hotdog-hw/hotdog-case.scad
-      
+      - name: Upload assets
+        uses: actions/upload-artifact@v3
+        with:
+          name: arduino-assets
+          path: assets
+
+  build-pcb:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Make assets directory
+        run: mkdir assets
       - name: Render front PCB
         uses: INTI-CMNB/KiBot@v2_k6
         with:
@@ -55,10 +55,8 @@ jobs:
           board: 'hotdog-hw/hotdog-pcb/hotdog-pcb-front.kicad_pcb'
           schema: 'hotdog-hw/hotdog-pcb/hotdog-pcb-front.kicad_sch'
           dir: assets
-
       - name: im not your maid kibot
         run: sudo rm -rf assets/pcbout
-
       - name: Render back PCB
         uses: INTI-CMNB/KiBot@v2_k6
         with:
@@ -66,11 +64,68 @@ jobs:
           board: 'hotdog-hw/hotdog-pcb/hotdog-pcb-back.kicad_pcb'
           schema: 'hotdog-hw/hotdog-pcb/hotdog-pcb-back.kicad_sch'
           dir: assets
-
       - name: clean up your own shit
         run: sudo rm -rf assets/pcbout
+      - name: Upload assets
+        uses: actions/upload-artifact@v3
+        with:
+          name: pcb-assets
+          path: assets
 
-      - name: Create Release
+  build-case:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Make assets directory
+        run: mkdir assets
+      - name: Install OpenSCAD
+        run: sudo apt-get install openscad
+      - name: Build top casing
+        run: openscad -o assets/hotdog-case-top.stl -D 'hotdog_top();' hotdog-hw/hotdog-case.scad
+      - name: Build bottom casing
+        run: openscad -o assets/hotdog-case-bottom.stl -D 'hotdog_bottom();' hotdog-hw/hotdog-case.scad
+      - name: Upload assets
+        uses: actions/upload-artifact@v3
+        with:
+          name: case-assets
+          path: assets
+
+  build-server:
+    runs-on: windows-2019
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Make assets directory
+        run: mkdir assets
+      - name: Setup msbuild path
+        uses: microsoft/setup-msbuild@v1.1
+      - name: Setup NuGet
+        uses: NuGet/setup-nuget@v1.0.2
+      - name: Build Hotdog Server
+        run: |
+          nuget restore
+          msbuild HotdogServer/HotdogServer.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=x86Profile
+          cp HotdogServer/HotdogServer/bin/Release/HotdogServer.exe assets
+      - name: Upload assets
+        uses: actions/upload-artifact@v3
+        with:
+          name: server-assets
+          path: assets
+
+  create-release:
+    needs:
+      - build-arduino
+      - build-pcb
+      - build-case
+      - build-server
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v3
+        with:
+          path: assets
+      - name: Create release
         id: create_release
         uses: actions/create-release@v1
         env:
@@ -80,8 +135,7 @@ jobs:
           release_name: Version ${{ github.event.inputs.version }}
           draft: true
           prerelease: false
-
-      - name: Upload Release Assets
+      - name: Upload release assets
         id: upload-release-assets
         uses: dwenegar/upload-release-assets@v1
         env:
@@ -89,4 +143,3 @@ jobs:
         with:
           release_id: ${{ steps.create_release.outputs.id }}
           assets_path: assets
-          

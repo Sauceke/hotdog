@@ -109,7 +109,7 @@ jobs:
           cd HotdogServer
           nuget restore
           msbuild HotdogServer.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=x86Profile
-          cp HotdogServer/bin/Release/HotdogServer.exe assets
+          cp HotdogServer/bin/Release/HotdogServer.exe ../assets
       - name: Upload assets
         uses: actions/upload-artifact@v3
         with:

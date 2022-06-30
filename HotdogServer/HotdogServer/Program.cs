@@ -8,7 +8,7 @@ namespace HotdogServer
 
         public static void Main(string[] args)
         {
-            int port = args.Length > 1 ? int.Parse(args[1]) : defaultPort;
+            int port = args.Length > 0 ? int.Parse(args[0]) : defaultPort;
             var server = new HotdogServer();
             server.Start(port);
             Console.WriteLine($"Hotdog server running on port {port}.");

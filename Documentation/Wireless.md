@@ -45,20 +45,34 @@ Estimated Cost : `10 - 20 US$` per PCB
 
 ### Stock Parts
 
-- **`A1`: Arduino Nano (a Nano Every also works) + two 1x15 pin female headers**
-- `BT1`: a 1xAAA battery holder (thru-hole mount recommended)
-- `C1`: a 10-100uF capacitor (optional)
-- `C2`: a ~1000uF capacitor (optional)
-- **`D1-D3`: three white LEDs (I used 334-15/T1C1-4WYA)**
-- **a 12cm long hook-up wire connecting `J1` to `J4`**
-- **a 12cm long hook-up wire connecting `J2` to `J3`**
-- **`R1-R5`: five GL5528 photoresistors**
-- **`R6`: 1kΩ resistor (or lower if you're using less bright LEDs)**
-- `SW1`: SPDT switch
-- `U1`: nRF24L01 + a 2x4 pin female header
-- `U2`: 0.8-5V to 5V boost converter + a 1x3 pin female header
-- A transparent sleeve (I used [this one](https://www.thehandy.com/product/the-handy-open-ended-sleeve-collection-hard-eu-uk-2/?ref=saucekebenfield&utm_source=saucekebenfield&utm_medium=affiliate&utm_campaign=The%20Handy%20Affiliate%20program))
+- **`A1` : Arduino Nano or compatible + two `1x15` pin female headers**
+
+- `BT1` : AAA battery holder (thru-hole mount recommended)
+
+- `C1` : `10 - 100uF` capacitor (optional)
+
+- `C2` : `~1000uF` capacitor (optional)
+
+- **`D1-D3` : three white LEDs, I used `334-15` / `T1C1-4WYA`**
+
+- **`12cm` long hook-up wire connecting `J1` to `J4`**
+
+- **`12cm` long hook-up wire connecting `J2` to `J3`**
+
+- **`R1-R5` : five GL5528 photoresistors**
+
+- **`R6` : 1kΩ resistor (or lower if you're using less bright LEDs)**
+
+- `SW1` : **SPDT** switch
+
+- `U1` : `nRF24L01` + a `2x4` pin female header
+
+- `U2` : `0.8 - 5V` to `5V` boost converter + a `1x3` pin female header
+
+- A transparent sleeve, I used **[This][Sleeve]** one.
+
 - Mini zip ties
+
 - Rubber bands
 
 <br>
@@ -66,7 +80,7 @@ Estimated Cost : `10 - 20 US$` per PCB
 
 ## Programming
 
-### Arduino Nano:
+### Arduino Nano
 
 Extract this **[Zip]** file and upload <br>
 the file `hotdog-fw.ino.hex` to <br>
@@ -361,22 +375,50 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
 <br>
 <br>
 
-### Final assembly
-1. Slide **hotdog-pcb-front** into **hotdog-case-top** and **hotdog-pcb-back** into **hotdog-case-bottom**. Make sure the LEDs and the photoresistors all face inwards (where the sleeve will be).
-2. Secure each motherboard with a zip tie and the cut-off end of another zip tie.
-3. Add the sleeve.
-4. Bind the two parts of the casing together at their open ends with zip ties. Fasten the zip ties just tight enough that the casing won't separate from the sleeve.
-5. Secure the other end of the casing to the sleeve with rubber bands.
-6. Insert battery, power on and serve.
+### Final Assembly
+
+1.  Slide the PCB into the casing:
+
+    **Front PCB**  ➞  **Top Casing**
+
+    **Bottom PCB**  ➞  **Bottom Casing**
+
+    *Make sure the LEDs and the photo-resistors <br>
+    all face inwards, where the sleeve will be.*
+
+2.  Secure each PCB with a zip tie and <br>
+    the cut-off end of another zip tie.
+
+3.  Add the sleeve.
+
+4.  Use zip ties to bind the two casing <br>
+    parts at their open ends together.
+
+    Fasten the zip ties just tight enough that <br>
+    the casing won't separate from the sleeve.
+
+5.  Secure the other end of the casing <br>
+    to the sleeve with rubber bands.
+
+6.  Insert the battery, power it on and serve.
 
 <br>
 <br>
 
 ## Operation
 
-In wireless mode, the Hotdog is powered by a single AAA battery. I recommend using a rechargeable one. It should last you about 2-3 hours on a single charge. There's no battery level indicator, so recharge frequently.
+In wireless mode, the **Hotdog** is powered by a single <br>
+AAA battery that should last you about `2 - 3` hours <bR>
+on a single charge.
 
-I'm still working on the client app for wireless, but it's already looking great. Stay tuned!
+*I recommend using a rechargeable one.*
+
+*There's no battery level indicator, so recharge frequently.*
+
+I'm still working on the client app for <br>
+wireless, but it's already looking great.
+
+Stay tuned!
 
 <br>
 
@@ -394,5 +436,8 @@ I'm still working on the client app for wireless, but it's already looking great
 
 [Bottom Casing]: https://github.com/Sauceke/hotdog/releases/latest/download/hotdog-case-bottom.stl
 [Top Casing]: https://github.com/Sauceke/hotdog/releases/latest/download/hotdog-case-top.stl
+
 [Front PCB]: https://github.com/Sauceke/hotdog/releases/latest/download/hotdog-pcb-front-fab.zip
 [Back PCB]: https://github.com/Sauceke/hotdog/releases/latest/download/hotdog-pcb-back-fab.zip
+
+[Sleeve]: https://www.thehandy.com/product/the-handy-open-ended-sleeve-collection-hard-eu-uk-2/?ref=saucekebenfield&utm_source=saucekebenfield&utm_medium=affiliate&utm_campaign=The%20Handy%20Affiliate%20program

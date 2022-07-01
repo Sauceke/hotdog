@@ -16,13 +16,22 @@
 ---
 
 [![Button Demo]][Demo]   
-[![Button Documentation]][Documentation]   
 [![Button Firmware]][Firmware]   
 [![Button PCB & Case]][PCB & Case]
 
 ---
 
 </div>
+
+<br>
+<br>
+
+## Assembly
+
+*How to build this project.*
+
+[![Button Wireless]][Wireless]   
+[![Button Wired]][Wired]
 
 <br>
 <br>
@@ -39,10 +48,11 @@ Thanks to **[@ManlyMarco]** for the idea.
 [@ManlyMarco]: https://github.com/ManlyMarco
 [Demo]: https://www.erome.com/a/rvRyi8gS
 
-[Documentation]: Documentation
 [PCB & Case]: Source/Hardware
+[Wireless]: Documentation/Wireless.md
 [Firmware]: Source/Firmware
 [License]: LICENSE
+[Wired]: Documentation/Wired.md
 
 
 <!---------------------------------[ Badges ]---------------------------------->
@@ -52,7 +62,8 @@ Thanks to **[@ManlyMarco]** for the idea.
 
 <!--------------------------------[ Buttons ]---------------------------------->
 
-[Button Documentation]: https://img.shields.io/badge/Documentation-3884FF?style=for-the-badge&logoColor=white&logo=GitBook
 [Button PCB & Case]: https://img.shields.io/badge/PCB_&_Case-3863A0?style=for-the-badge&logoColor=white&logo=Task
 [Button Firmware]: https://img.shields.io/badge/Firmware-00979D?style=for-the-badge&logoColor=white&logo=Arduino
+[Button Wireless]: https://img.shields.io/badge/Wireless-006643?style=for-the-badge&logoColor=white&logo=RSS
+[Button Wired]: https://img.shields.io/badge/Wired-2D50A5?style=for-the-badge&logoColor=white&logo=EquinixMetal
 [Button Demo]: https://img.shields.io/badge/NSFW_Demo-ED2761?style=for-the-badge&logoColor=white&logo=Aparat

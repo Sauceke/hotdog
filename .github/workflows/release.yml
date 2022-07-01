@@ -34,7 +34,7 @@ jobs:
       - name: Zip firmware binaries (Nano)
         run: zip -r assets/hotdog-fw-nano-bin.zip hotdog-fw-nano-bin
       - name: Copy firmware sketch into assets
-        run: cp Source/Firmware/Firmware.ino assets
+        run: cp Source/Firmware/Firmware.ino assets/hotdog-fw.ino
       - name: Upload assets
         uses: actions/upload-artifact@v3
         with:

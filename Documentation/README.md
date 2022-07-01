@@ -1,3 +1,20 @@
-## [How to make one (wireless)](doc/wireless/ASSEMBLY.md)
 
-## [How to make one (eco)](doc/eco/ASSEMBLY.md)
+# Documentation
+
+<br>
+
+## Assembly
+
+*How to build this project.*
+
+- **[Wireless]**
+
+- **[Wired]**
+
+
+
+<!----------------------------------------------------------------------------->
+
+[Wireless]: Wired.md
+[Wired]: Wireless.md
+

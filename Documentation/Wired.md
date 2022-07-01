@@ -5,10 +5,11 @@
 
 <br>
 
-
 If you have access to a 3D printer and use a cheap <br>
 Nano clone with `CH340`, the whole thing will run <br>
 you around `$20`, not counting the sleeve itself.
+
+<br>
 
 ## Parts
 
@@ -222,6 +223,6 @@ hook them up to the Nano to each other.
 
 [PCB Hestore]: https://www.hestore.hu/prod_10031793.html?lang=en
 [PCB Amazon]: https://www.amazon.de/-/en/WITTKOWARE-Perforated-Compartments-Copper-RM2-54/dp/B07W8H39TR
-[PCB Ormix]: https://ormix.lv/en/catalog/item/id/21692/))
+[PCB Ormix]: https://ormix.lv/en/catalog/item/id/21692/
 
 

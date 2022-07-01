@@ -126,7 +126,7 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
 
     <img
       src = '../Resources/Wireless/A1_prep.jpeg'
-      width = 210
+      height = 200
     />
     
     <br>
@@ -150,7 +150,7 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
 
     <img
       src = '../Resources/Wireless/R1-R5_mount.jpeg'
-      width = 210
+      height = 200
     />
 
     <br>
@@ -260,7 +260,7 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
 
     <img
       src = '../Resources/Wireless/BT1_prep.jpeg'
-      width = 210
+      height = 200
     />
     
     <br>
@@ -269,7 +269,7 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
 
     <img
       src = '../Resources/Wireless/BT1_solder.jpeg'
-      width = 210
+      height = 200
     />
     
     <br>
@@ -307,7 +307,7 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
 
     <img
       src = '../Resources/Wireless/C1_mount.jpeg'
-      width = 210
+      height = 200
     />
     
     <br>
@@ -350,7 +350,7 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
 
     <img
       src = '../Resources/Wireless/R6_mount.jpeg'
-      width = 210
+      height = 200
     />
     
     <br>
@@ -362,14 +362,14 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
 
     <img
       src = '../Resources/Wireless/J1-J4_mount.jpeg'
-      width = 210
+      height = 200
     />
 
     The motherboards are now complete.
 
     <img
       src = '../Resources/Wireless/BACK_done.jpeg'
-      width = 210
+      height = 200
     />
 
 <br>

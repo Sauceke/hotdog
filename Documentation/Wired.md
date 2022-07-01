@@ -89,7 +89,7 @@ Upload the **[Firmware]** to the micro-controller.
 
     <img
       src = '../Resources/Wired/photo1.jpg'
-      width = 420
+      height = 300
     />
     
     <br>
@@ -99,14 +99,14 @@ Upload the **[Firmware]** to the micro-controller.
     
     <img
       src = '../Resources/Wired/Schematics/A.svg'
-      width = 420
+      width = 400
     />
 
     The front side should look something like this:
     
     <img
       src = '../Resources/Wired/photo2.jpg'
-      width = 420
+      height = 300
     />
     
     <br>
@@ -118,7 +118,7 @@ Upload the **[Firmware]** to the micro-controller.
 
     <img
       src = '../Resources/Wired/photo3.jpg'
-      width = 420
+      height = 300
     />
 
     You don't have to solder each and every pin <br>
@@ -139,12 +139,11 @@ Upload the **[Firmware]** to the micro-controller.
 
     <img
       src = '../Resources/Wired/Schematics/B.svg'
-      width = 420
+      height = 220
     />
-    
     <img
       src = '../Resources/Wired/photo4.jpg'
-      width = 420
+      height = 220
     />
 
     After the photocells are connected, you can trim off all the legs.
@@ -160,12 +159,11 @@ hook them up to the Nano to each other.
     
     <img
       src = '../Resources/Wired/Schematics/C.svg'
-      width = 420
+      height = 360
     />
-
     <img
       src = '../Resources/Wired/photo5.jpg'
-      width = 420
+      height = 360
     />
 
     <br>
@@ -176,7 +174,7 @@ hook them up to the Nano to each other.
 
     <img
       src = '../Resources/Wired/photo6.jpg'
-      width = 420
+      height = 300
     />
 
     <br>
@@ -186,7 +184,7 @@ hook them up to the Nano to each other.
     
     <img
       src = '../Resources/Wired/photo7.jpg'
-      width = 420
+      width = 470
     />
     
     <br>
@@ -198,7 +196,7 @@ hook them up to the Nano to each other.
 
     <img
       src = '../Resources/Wired/photo8.jpg'
-      width = 420
+      width = 470
     />
 
     <br>

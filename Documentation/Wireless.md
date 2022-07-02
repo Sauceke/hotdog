@@ -158,7 +158,7 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
     *It is recommended to clip the leads off*  
     *before soldering to minimize heat loss.*
     
-    I prefer to also bend the wires in before clipping <br>
+    I prefer to also bend the wires in before clipping  
     them short, so the parts won't come loose.
 
     <img

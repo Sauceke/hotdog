@@ -82,8 +82,8 @@ Estimated Cost : `10 - 20 US$` per PCB
 
 ### Arduino Nano
 
-Extract this **[Zip]** file and upload <br>
-the file `hotdog-fw.ino.hex` to <br>
+Extract this **[Zip]** file and upload  
+the file `hotdog-fw.ino.hex` to  
 the Nano using **[XLoader]**.
 
 <img
@@ -93,7 +93,7 @@ the Nano using **[XLoader]**.
 
 ##### Windows
 
-By default you should be able to <br>
+By default you should be able to  
 use `COM0`, if not try other ports.
 
 <br>
@@ -119,7 +119,7 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
 
 1.  Place the `1x15` headers on the Nano.
 
-    *I didn't have 1x15, so I cheated and yanked* <br>
+    *I didn't have 1x15, so I cheated and yanked*  
     *out one of the terminals from a `1x16`.*
     
     *Don't be like me.*
@@ -131,7 +131,7 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
     
     <br>
 
-2.  Solder the micro-controller to the PCB with <br>
+2.  Solder the micro-controller to the PCB with  
     its USB connector facing towards the edge.
 
     <img
@@ -145,7 +145,7 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
     
     <br>
 
-3.  Solder the photo-resistors to `R1-R5` <br>
+3.  Solder the photo-resistors to `R1-R5`  
     on the opposite side of the PCB.
 
     <img
@@ -155,7 +155,7 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
 
     <br>
 
-    *It is recommended to clip the leads off* <br>
+    *It is recommended to clip the leads off*  
     *before soldering to minimize heat loss.*
     
     I prefer to also bend the wires in before clipping <br>
@@ -185,10 +185,10 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
     
     <br>
 
-5.  Put the `1x3` female header on the <br>
+5.  Put the `1x3` female header on the  
     boost converter and solder it to `U2`.
 
-    Make sure `V1` and `V0` are aligned <br>
+    Make sure `V1` and `V0` are aligned  
     with the markings on the PCB.
 
     <img
@@ -221,7 +221,7 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
 
     The terminals should go into the three holes in the middle.
     
-    Mine was a bit over-sized, but as they <br>
+    Mine was a bit over-sized, but as they  
     say, if there's a hole, there's a way.
 
     <img
@@ -237,25 +237,25 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
     
     <br>
 
-8.  If you have a thru-hole mount `1xAAA` battery <br>
-    holder, you can go ahead and solder it to `BT1` <br>
+8.  If you have a thru-hole mount `1xAAA` battery  
+    holder, you can go ahead and solder it to `BT1`  
     and skip to step 13.
 
     ***Mind the polarity***
 
-    If you're using a cheaper battery holder like <br>
+    If you're using a cheaper battery holder like  
     I did, we need to take a few extra steps.
     
-    This can get quite messy though, so in <br>
-    retrospect I absolutely recommend <br>
+    This can get quite messy though, so in  
+    retrospect I absolutely recommend  
     getting a proper thru-hole mount.
     
     <br>
 
-9.  First, trim both wires to about `2cm`, and put some <br>
+9.  First, trim both wires to about `2cm`, and put some  
     deep scratches into the bottom with a sharp object.
 
-    This is crucial to ensure proper adhesion <br>
+    This is crucial to ensure proper adhesion  
     to the board, so carve it up like a psycho.
 
     <img
@@ -274,16 +274,16 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
     
     <br>
 
-11. Clean both the `BT1` footprint and the <br>
+11. Clean both the `BT1` footprint and the  
     battery holder with isopropyl alcohol.
 
 12. Glue the battery holder to `BT1` with epoxy.
 
-    ***⚠ Make sure there is at least `5mm` clearance*** <br>
-    ***between the battery holder and the edge of*** <br>
+    ***⚠ Make sure there is at least `5mm` clearance***  
+    ***between the battery holder and the edge of***  
     ***the motherboard.***
     
-    *It doesn't have to be precisely on the footprint,* <br>
+    *It doesn't have to be precisely on the footprint,*  
     *but do not place it any further below that.*
 
     <img
@@ -312,7 +312,7 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
     
     <br>
 
-14. Insert the `nRF24` into the `U1` socket, <br>
+14. Insert the `nRF24` into the `U1` socket,  
     and that's the front motherboard done.
 
     <img
@@ -331,8 +331,8 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
 
 1.  Solder the LEDs to `D1-D3`.
 
-    Pay attention to polarity; one of the sides <br>
-    on each LED is flattened, line that up with <br>
+    Pay attention to polarity; one of the sides  
+    on each LED is flattened, line that up with  
     the drawing on the PCB.
       
     <img
@@ -355,7 +355,7 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
     
     <br>
 
-3.  Connect `J1` to `J4` and `J2` to `J3` <br>
+3.  Connect `J1` to `J4` and `J2` to `J3`  
     with `12cm` long hook-up wires.
 
     Solder those in as well.
@@ -383,21 +383,21 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
 
     **Bottom PCB**  ➞  **Bottom Casing**
 
-    *Make sure the LEDs and the photo-resistors <br>
-    all face inwards, where the sleeve will be.*
+    *Make sure the LEDs and the photo-resistors*  
+    *all face inwards, where the sleeve will be.*
 
-2.  Secure each PCB with a zip tie and <br>
+2.  Secure each PCB with a zip tie and  
     the cut-off end of another zip tie.
 
 3.  Add the sleeve.
 
-4.  Use zip ties to bind the two casing <br>
+4.  Use zip ties to bind the two casing  
     parts at their open ends together.
 
-    Fasten the zip ties just tight enough that <br>
+    Fasten the zip ties just tight enough that  
     the casing won't separate from the sleeve.
 
-5.  Secure the other end of the casing <br>
+5.  Secure the other end of the casing  
     to the sleeve with rubber bands.
 
 6.  Insert the battery, power it on and serve.
@@ -407,15 +407,15 @@ Compile & upload the **[Firmware]** using the **[Arduino IDE]**.
 
 ## Operation
 
-In wireless mode, the **Hotdog** is powered by a single <br>
-AAA battery that should last you about `2 - 3` hours <bR>
+In wireless mode, the **Hotdog** is powered by a single  
+AAA battery that should last you about `2 - 3` hours  
 on a single charge.
 
 *I recommend using a rechargeable one.*
 
 *There's no battery level indicator, so recharge frequently.*
 
-I'm still working on the client app for <br>
+I'm still working on the client app for  
 wireless, but it's already looking great.
 
 Stay tuned!

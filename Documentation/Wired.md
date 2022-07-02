@@ -5,8 +5,8 @@
 
 <br>
 
-If you have access to a 3D printer and use a cheap <br>
-Nano clone with `CH340`, the whole thing will run <br>
+If you have access to a 3D printer and use a cheap  
+Nano clone with `CH340`, the whole thing will run  
 you around `$20`, not counting the sleeve itself.
 
 <br>
@@ -44,7 +44,7 @@ you around `$20`, not counting the sleeve itself.
 
 -   3 x `334-15/T1C1-4WYA` LEDs 
     
-    *These are actually overkill, you could also* <br>
+    *These are actually overkill, you could also*  
     *go with dimmer LEDs and a smaller resistor*
     
 -   `1kΩ` resistor
@@ -76,15 +76,15 @@ Upload the **[Firmware]** to the micro-controller.
 
 ## Assembly
 
-1.  Place the photo-resistors on the **back side** of the <br>
+1.  Place the photo-resistors on the **back side** of the  
     PCB at equal distances along the middle line.
 
-    The exact distance between them is not that <br>
+    The exact distance between them is not that  
     important, but try to place them evenly.
     
     Solder them in position.
     
-    *This is easier if your PCB is plated on both sides, if it <br>
+    *This is easier if your PCB is plated on both sides, if it  
     isn't, then take extra care not to burn the photocells.*
 
     <img
@@ -94,7 +94,7 @@ Upload the **[Firmware]** to the micro-controller.
     
     <br>
 
-2.  Wire up the photocells as shown diagram, except <br>
+2.  Wire up the photocells as shown diagram, except  
     with the wires on the **front side** of the board.
     
     <img
@@ -111,7 +111,7 @@ Upload the **[Firmware]** to the micro-controller.
     
     <br>
 
-3.  Put the sockets on the Nano and solder them <br>
+3.  Put the sockets on the Nano and solder them  
     onto the board in the below orientation.
 
     *Leave at least one row space at the top ↓*
@@ -121,20 +121,20 @@ Upload the **[Firmware]** to the micro-controller.
       height = 300
     />
 
-    You don't have to solder each and every pin <br>
+    You don't have to solder each and every pin  
     in, but at the bare minimum, do the corners.
     
     Make sure you don't solder any adjacent pins together.
     
     <br>
 
-4.  Now connect the photocells to the <br>
+4.  Now connect the photocells to the  
     Nano according to the diagram.
 
-    ***Do NOT solder the wires directly onto*** <br>
+    ***Do NOT solder the wires directly onto***  
     ***the Nano, solder them to the sockets.***
     
-    *I couldn't find a way to illustrate this in* <br>
+    *I couldn't find a way to illustrate this in*  
     *Fritzing, so also see the photo for reference.*
 
     <img
@@ -150,7 +150,7 @@ Upload the **[Firmware]** to the micro-controller.
     
     <br>
 
-5.  Mount the LEDs on the second PCB and <br>
+5.  Mount the LEDs on the second PCB and  
 hook them up to the Nano to each other.
     
     *Black wire to cathodes.*
@@ -179,7 +179,7 @@ hook them up to the Nano to each other.
 
     <br>
 
-7.  Slide the PCBs in, secure each with a zip-tie <br>
+7.  Slide the PCBs in, secure each with a zip-tie  
     and the clipped off end of another zip-tie.
     
     <img
@@ -189,7 +189,7 @@ hook them up to the Nano to each other.
     
     <br>
 
-8.  Add the sleeve, hold it down with rubber bands <br>
+8.  Add the sleeve, hold it down with rubber bands  
     at the front and tighten the zip-ties at the back.
 
     *Make sure all sides of the casing press down on the sleeve evenly.*

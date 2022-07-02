@@ -1,2 +1,4 @@
-theme: jekyll-theme-hacker
 markdown: GFM
+remote_theme: songzivong/dark-minima
+plugins:
+- jekyll-remote-theme

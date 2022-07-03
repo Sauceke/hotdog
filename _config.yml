@@ -1,6 +1,1 @@
 markdown: GFM
-remote_theme: abhinavs/moonwalk
-theme_config:
-  appearance: dark
-plugins:
-  - jekyll-remote-theme

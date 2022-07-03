@@ -1,4 +1,6 @@
 markdown: GFM
-remote_theme: songzivong/dark-minima
+remote_theme: abhinavs/moonwalk
+theme_config:
+  appearance: dark
 plugins:
-- jekyll-remote-theme
+  - jekyll-remote-theme

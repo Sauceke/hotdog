@@ -49,8 +49,8 @@ Thanks to **[@ManlyMarco]** for the idea.
 [Demo]: https://www.erome.com/a/rvRyi8gS
 
 [License]: LICENSE
-[PCB & Case]: https://github.com/Sauceke/hotdog/Source/Hardware
-[Firmware]: https://github.com/Sauceke/hotdog/Source/Firmware
+[PCB & Case]: https://github.com/Sauceke/hotdog/tree/master/Source/Hardware
+[Firmware]: https://github.com/Sauceke/hotdog/tree/master/Source/Firmware
 [Wireless]: Documentation/Wireless.md
 [Wired]: Documentation/Wired.md
 

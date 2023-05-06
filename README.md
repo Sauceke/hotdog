@@ -48,10 +48,10 @@ Thanks to **[@ManlyMarco]** for the idea.
 [@ManlyMarco]: https://github.com/ManlyMarco
 [Demo]: https://www.erome.com/a/rvRyi8gS
 
-[PCB & Case]: Source/Hardware
-[Wireless]: Documentation/Wireless.md
-[Firmware]: Source/Firmware
 [License]: LICENSE
+[PCB & Case]: https://github.com/Sauceke/hotdog/Source/Hardware
+[Firmware]: https://github.com/Sauceke/hotdog/Source/Firmware
+[Wireless]: Documentation/Wireless.md
 [Wired]: Documentation/Wired.md
 
 
